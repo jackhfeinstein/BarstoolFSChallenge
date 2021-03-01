@@ -1,0 +1,61 @@
+@import "../index.scss";
+
+//outer border
+#cont-border {
+    height: 90vh;
+    width: 95vw;
+
+    margin: 40px auto auto;
+
+    border-radius: 10px;
+    border: 3px solid navy;
+
+    //league selector on top of the outer border
+    #league-options {
+        width: 20%;
+        border-radius: 10px;
+        border: 3px solid navy;
+
+        margin: -30px auto;
+
+        //common styles among the league buttons
+        .league-button {
+            width: 50%;
+            height: 50px;
+
+            font-size: 30px;
+
+            @media only screen and (max-width: 830px) {
+                font-size: 20px;
+            } @media only screen and (max-width: 530px) {
+                font-size: 12px;
+            }
+
+            font-weight: bold;
+
+            transition: background-color .3s ease-out;
+        }
+
+        //left most league button
+        .left {
+            border-radius: 7px 0 0 7px;
+        }
+
+        //right most league button
+        .right {
+            border-radius: 0 7px 7px 0;
+        }
+
+        //league button that is on
+        #true {
+            background-color: red;
+            color: white;
+        }
+
+        //league buttons that are off
+        #false {
+            background-color: white;
+            color: navy;
+        }
+    }
+}

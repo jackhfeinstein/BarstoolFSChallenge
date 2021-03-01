@@ -1,0 +1,41 @@
+//tables that display game info
+#game-info {
+
+    overflow: hidden;
+
+    th, td {
+        width: 50%;
+        padding: 1%;
+    }
+
+    #header {
+        text-align: center;
+    }
+}
+
+//more stats tables
+.more-stats-table {
+    width: 96%;
+    margin: 2%;
+
+    //rows that are odd
+    #odd {
+        background-color: #ededed;
+    }
+
+    //data and headers of the tables
+    th, td {
+        text-align: left;
+        white-space: nowrap;
+        overflow: visible;
+        padding-right: 5px;
+    }
+
+    //heading of a section of stats
+    #header {
+        width: unset;
+        text-align: left;
+        color: navy;
+        padding: 15px 0;
+    }
+}

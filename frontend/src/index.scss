@@ -1,0 +1,22 @@
+//buttons
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+}
+
+//text blocks
+p, h1, h2, h3, h4 {
+    padding: unset;
+    margin: unset;
+    font-family: "Tahoma", sans-serif;
+    display: inline-block;
+}
+
+//table blocks {
+th, td {
+    font-family: "Tahoma", sans-serif;
+    text-align: center;
+}

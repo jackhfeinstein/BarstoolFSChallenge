@@ -1,0 +1,132 @@
+@import "src/index.scss";
+
+//game component
+.game {
+    padding: 5% 5% 0;
+
+    //progress of the game
+    #progress {
+        color: darkgray;
+        font-weight: bold;
+    }
+
+    //main game info
+    .game-info {
+        border-radius: 10px;
+        border: 3px solid navy;
+
+        margin: 5px 0;
+
+        overflow: hidden;
+
+        //table for score by period
+        .box-score-table {
+            width: 100%;
+            height: 100px;
+
+            //individual scores by period
+            td {
+                color: navy;
+            }
+
+            //total scores
+            .total {
+                color: red;
+            }
+
+            //the winners score
+            #winner {
+                font-weight: bold;
+            }
+        }
+
+        #more-stats {
+            border-radius: 10px;
+            border: 2px solid navy;
+
+            margin: 20px auto;
+
+            width: 90%;
+            height: 300px;
+
+            //league selector on top of the outer border
+            #stat-options {
+                width: 40%;
+                border-radius: 10px;
+                border: 2px solid navy;
+
+                margin: -17.5px auto;
+
+                display: flex;
+
+                z-index: 10;
+
+                //common styles among the league buttons
+                .stat-button {
+                    width: 50%;
+                    height: 30px;
+
+                    border: 1px solid navy;
+
+                    font-size: 20px;
+
+                    @media only screen and (max-width: 830px) {
+                        font-size: 14px;
+                    } @media only screen and (max-width: 530px) {
+                    font-size: 8px;
+                }
+
+                    font-weight: bold;
+
+                    transition: background-color .3s ease-out;
+                }
+
+                //left most league button
+                .left {
+                    border-radius: 7px 0 0 7px;
+                }
+
+                //right most league button
+                .right {
+                    border-radius: 0 7px 7px 0;
+                }
+
+                //league button that is on
+                #true {
+                    background-color: red;
+                    color: white;
+                }
+
+                //league buttons that are off
+                #false {
+                    background-color: white;
+                    color: navy;
+                }
+            }
+
+            #more-stats-stat-tables {
+                overflow: auto;
+                height: 94%;
+                margin-top: 17px;
+            }
+        }
+    }
+
+    //game when collapsed
+    .collapsed {
+        height: 100px;
+        transition: height .5s cubic-bezier(0.29, 0.48, 0, 1);
+    }
+
+    //game when expanded
+    .expanded {
+        height: 450px;
+        transition: height .5s cubic-bezier(0.29, 0.48, 0, 1);
+    }
+
+    //see more button underneath the main game
+    #see-more {
+        color: navy;
+        cursor: pointer;
+    }
+}
